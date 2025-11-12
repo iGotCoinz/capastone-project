@@ -1,71 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NIL Financial Education for College Athletes</title>
-  <link rel="stylesheet" href="project.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIL Financial Education</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="wrapper">
 
+    <!-- Header / Navigation -->
     <header>
-      <h1>NIL Financial Education</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="tools.html">Tools</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="community.html">Community</a></li>
-        </ul>
-      </nav>
+        <div class="logo">NIL Financial Education</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="resources.html">Resources</a>
+            <a href="community.html">Community</a>
+        </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Welcome, College Athletes!</h2>
-        <p>Our goal is to help you manage and grow your NIL earnings responsibly with education, tools, and expert support.</p>
-      </section>
+    <!-- Hero Section -->
+    <section id="hero" style="background:url('images/hero-athlete.jpg') center/cover; color:white;">
+        <div class="hero-text">
+            <h1>Manage Your NIL Earnings Wisely</h1>
+            <p>Learn, plan, and grow your financial future as a student-athlete.</p>
+            <a href="tools.html" class="cta-button">Explore Tools</a>
+        </div>
+    </section>
 
-      <section>
+    <!-- Key Services Overview -->
+    <section id="services">
         <h2>Key Services Overview</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Service</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Education</td>
-              <td>Learn budgeting, saving, taxes, investing, and contract literacy.</td>
-            </tr>
-            <tr>
-              <td>Tools</td>
-              <td>Access calculators, trackers, and planners to manage your money.</td>
-            </tr>
-            <tr>
-              <td>Support</td>
-              <td>Get advice from vetted financial professionals and attorneys.</td>
-            </tr>
-            <tr>
-              <td>Community</td>
-              <td>Connect and share experiences with fellow athletes.</td>
-            </tr>
-            <tr>
-              <td>Compliance</td>
-              <td>Stay aligned with NCAA/NIL regulations.</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+        <div class="service-grid">
+            <div class="service">
+                <h3>Education</h3>
+                <p>Learn budgeting, saving, taxes, investing, and contract literacy.</p>
+            </div>
+            <div class="service">
+                <h3>Tools</h3>
+                <p>Access calculators, trackers, and planners to manage your money.</p>
+            </div>
+            <div class="service">
+                <h3>Support</h3>
+                <p>Get advice from vetted financial professionals and attorneys.</p>
+            </div>
+            <div class="service">
+                <h3>Community</h3>
+                <p>Connect and share experiences with fellow athletes.</p>
+            </div>
+            <div class="service">
+                <h3>Compliance</h3>
+                <p>Stay aligned with NCAA/NIL regulations.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Video Section -->
+    <section id="video">
+        <h2>Budgeting Basics for NIL Athletes</h2>
+        <video controls width="100%">
+            <source src="videos/budgeting-basics.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- CSS Image Gallery -->
+    <section id="gallery">
+        <h2>Athlete Financial Success Stories</h2>
+        <div class="gallery">
+            <figure>
+                <img src="images/athlete1.jpg" alt="Basketball player budgeting on laptop">
+                <figcaption>Jordan - Saved $10k from his NIL deals</figcaption>
+            </figure>
+            <figure>
+                <img src="images/athlete2.jpg" alt="Track athlete meeting with financial advisor">
+                <figcaption>Mia - Built her first investment portfolio</figcaption>
+            </figure>
+            <figure>
+                <img src="images/athlete3.jpg" alt="Soccer player signing NIL contract">
+                <figcaption>Devon - Signed his first NIL brand deal responsibly</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>NIL Compliance & Financial FAQ</h2>
+        <details>
+            <summary>Do NIL earnings count as taxable income?</summary>
+            <p>Yes. NIL income must be reported on your tax return. We recommend setting aside 25–30% of your earnings for tax payments.</p>
+        </details>
+        <details>
+            <summary>Can my school help manage my NIL deals?</summary>
+            <p>Some schools offer compliance officers or legal advisors, but you are ultimately responsible for understanding your contracts and income.</p>
+        </details>
+        <details>
+            <summary>What if I’m offered free products instead of cash?</summary>
+            <p>Even non-cash NIL compensation (like gear or gifts) can be considered taxable income depending on its fair market value.</p>
+        </details>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <p>Copyright &copy; 2025 NIL Financial Education</p>
+        <p>Copyright © 2025 NIL Financial Education</p>
+        <p>Follow us: 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Facebook</a>
+        </p>
     </footer>
 
-  </div>
 </body>
 </html>
