@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products – NIL Financial Tools</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NIL Financial Education</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="form.html">Contact</a>
+    </nav>
+</header>
+
+<main style="padding: 40px;">
+    <h1>Financial Tools for Student-Athletes</h1>
+    <p>Purchase downloadable resources to manage your NIL money effectively.</p>
+
+    <div class="service-grid">
+        <!-- PRODUCT 1 -->
+        <div class="service">
+            <h3>NIL Budget Planner</h3>
+            <p>Track your monthly income, spending, and taxes.</p>
+            <p><strong>$9.99</strong></p>
+
+            <div id="paypal1"></div>
+            <script>
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: { value: "9.99" }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert("Thank you, " + details.payer.name.given_name + "!");
+                        });
+                    }
+                }).render('#paypal1');
+            </script>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="service">
+            <h3>Tax Estimator Sheet</h3>
+            <p>Calculate how much you should set aside for taxes.</p>
+            <p><strong>$4.99</strong></p>
+
+            <div id="paypal2"></div>
+            <script>
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: { value: "4.99" }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert("Purchase complete! Thank you!");
+                        });
+                    }
+                }).render('#paypal2');
+            </script>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="service">
+            <h3>NIL Contract Checklist</h3>
+            <p>Understand key terms in brand deals before signing.</p>
+            <p><strong>$2.99</strong></p>
+
+            <div id="paypal3"></div>
+            <script>
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: { value: "2.99" }
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert("Your download will be sent to your email.");
+                        });
+                    }
+                }).render('#paypal3');
+            </script>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>© 2025 NIL Financial Education</p>
+</footer>
+
+</body>
+</html>
