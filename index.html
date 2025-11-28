@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIL Financial Education</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery for slideshow -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick slideshow plugin -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        // ALERT MESSAGE
+        window.onload = function() {
+            alert("Welcome! Learn how to manage your NIL money wisely.");
+        };
+
+        // SLIDESHOW
+        $(document).ready(function(){
+            $('.slideshow').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                dots: true
+            });
+        });
+
+        // SCROLL TO TOP BUTTON
+        window.addEventListener("scroll", function() {
+            const btn = document.getElementById("topBtn");
+            btn.style.display = (window.scrollY > 300 ? "block" : "none");
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
 </head>
+
 <body>
+
+    <!-- Scroll-To-Top Button -->
+    <button id="topBtn" onclick="scrollToTop()" style="
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        padding: 12px 18px;
+        font-size: 16px;
+        background-color: #6b4f4f;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        display: none;
+        cursor: pointer;
+    ">↑ Top</button>
 
     <!-- Header / Navigation -->
     <header>
@@ -58,30 +108,21 @@
     <!-- Video Section -->
     <section id="video">
         <h2>Budgeting Basics for NIL Athletes</h2>
-        <!-- Using YouTube embed instead of <video> -->
         <iframe width="100%" height="400" 
-            src="https://www.youtube.com/embed/PjG3cltMojs" 
+            src="https://www.youtube.com/embed/PjG3cltMojs"
             title="Budgeting Basics for NIL Athletes" 
             frameborder="0" allowfullscreen>
         </iframe>
     </section>
 
-    <!-- CSS Image Gallery -->
+    <!-- SLIDESHOW SECTION -->
     <section id="gallery">
-        <h2>Athlete Financial Success Stories</h2>
-        <div class="gallery">
-            <figure>
-                <img src="https://via.placeholder.com/300x200?text=Jordan" alt="Basketball player budgeting on laptop">
-                <figcaption>Jordan - Saved $10k from his NIL deals</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200?text=Mia" alt="Track athlete meeting with financial advisor">
-                <figcaption>Mia - Built her first investment portfolio</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200?text=Devon" alt="Athlete signing NIL deal">
-                <figcaption>Devon - Signed his first NIL brand deal responsibly</figcaption>
-            </figure>
+        <h2>Athlete Success Stories (Slideshow)</h2>
+
+        <div class="slideshow">
+            <div><img src="https://via.placeholder.com/800x400?text=Jordan" alt="Jordan"></div>
+            <div><img src="https://via.placeholder.com/800x400?text=Mia" alt="Mia"></div>
+            <div><img src="https://via.placeholder.com/800x400?text=Devon" alt="Devon"></div>
         </div>
     </section>
 
@@ -90,15 +131,15 @@
         <h2>NIL Compliance & Financial FAQ</h2>
         <details>
             <summary>Do NIL earnings count as taxable income?</summary>
-            <p>Yes. NIL income must be reported on your tax return. We recommend setting aside 25–30% of your earnings for tax payments.</p>
+            <p>Yes. NIL income must be reported on your tax return. Set aside 25–30%.</p>
         </details>
         <details>
             <summary>Can my school help manage my NIL deals?</summary>
-            <p>Some schools offer compliance officers or legal advisors, but you are ultimately responsible for understanding your contracts and income.</p>
+            <p>You are ultimately responsible for understanding your contracts.</p>
         </details>
         <details>
-            <summary>What if I’m offered free products instead of cash?</summary>
-            <p>Even non-cash NIL compensation (like gear or gifts) can be considered taxable income depending on its fair market value.</p>
+            <summary>What if I'm offered free products instead of cash?</summary>
+            <p>Non-cash NIL compensation can still be taxable.</p>
         </details>
     </section>
 
